@@ -54,19 +54,13 @@ async def main_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.edit_message_text("Select an option:", reply_markup=InlineKeyboardMarkup(keyboard))
     elif query.data == "howtopay":
         await query.edit_message_text(
-            "After placing your order, we'll give you a Solana (SOL) address and the exact amount to send.
-
-"
-            "No crypto knowledge needed — just copy and paste. We'll handle the rest.
-
-"
-            "Need help? Here are step-by-step videos:
-"
-            "▶️ [How to Buy Solana on Coinbase](https://www.youtube.com/watch?v=O4YzYAKrFME)
-"
-            "▶️ [How to Send Solana from Coinbase](https://www.youtube.com/watch?v=3sXN-ZJB-7U)",
-            parse_mode='Markdown'
-        )
+    "After placing your order, we'll give you a Solana (SOL) address and the exact amount to send.\n\n"
+    "No crypto knowledge needed — just copy and paste. We'll handle the rest.\n\n"
+    "Need help? Here are step-by-step videos:\n"
+    "▶️ [How to Buy Solana on Coinbase](https://www.youtube.com/watch?v=O4YzYAKrFME)\n"
+    "▶️ [How to Send Solana from Coinbase](https://www.youtube.com/watch?v=3sXN-ZJB-7U)",
+    parse_mode='Markdown'
+)
     elif query.data == "menu":
         await start(update, context)
 
